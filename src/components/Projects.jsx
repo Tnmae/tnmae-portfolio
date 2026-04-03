@@ -1,6 +1,13 @@
 import React, { useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
+// Disable tilt on touch/coarse pointer devices
+const isTouchDevice = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+const IS_TOUCH = isTouchDevice();
+
 const hardwareProjects = [
   {
     title: 'ESP32 BLE Mouse Controller',
@@ -101,17 +108,17 @@ const TiltCard = ({ project, i }) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
-    if (!ref.current) return;
+    if (IS_TOUCH || !ref.current) return;
     const { left, top, width, height } = ref.current.getBoundingClientRect();
     const x = e.clientX - left;
     const y = e.clientY - top;
-    const rotateX = ((y / height) - 0.5) * -15; // Increased tilt angle for more 3D feel
+    const rotateX = ((y / height) - 0.5) * -15;
     const rotateY = ((x / width) - 0.5) * 15;
     setRotation({ x: rotateX, y: rotateY });
   };
 
   const handleMouseLeave = () => {
-    setRotation({ x: 0, y: 0 });
+    if (!IS_TOUCH) setRotation({ x: 0, y: 0 });
   };
 
   return (
@@ -223,7 +230,7 @@ const ProjectGroup = ({ title, projects }) => {
         </h3>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: '2rem' }}>
         {projects.map((project, i) => (
           <TiltCard key={project.title} project={project} i={i} />
         ))}

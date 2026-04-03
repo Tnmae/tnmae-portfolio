@@ -20,7 +20,21 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  cursor: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Only hide the system cursor on real pointer devices */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+/* On touch devices restore the default cursor so the site stays usable */
+@media (hover: none) or (pointer: coarse) {
+  *, *::before, *::after {
+    cursor: auto !important;
+  }
 }
 
 body, html {
@@ -334,7 +348,75 @@ section {
   50%, 100% { opacity: 0; }
 }
 
-/* Custom Cursor Styles */
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+}
+
+/* ─── MOBILE OVERRIDES ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --nav-offset: 72px;
+  }
+
+  /* Sections: drop enforced full-height so content flows naturally */
+  section {
+    min-height: auto;
+    padding: clamp(80px, 14vw, 120px) clamp(20px, 6vw, 48px);
+  }
+
+  /* Hero: keep min-height so it still fills the viewport */
+  #hero {
+    min-height: 100svh;
+  }
+
+  /* Skills: single column on very narrow screens */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hide ambient gradient on tiny screens — saves paint cost */
+  .ambient-gradient-bg {
+    display: none;
+  }
+
+  /* 3D scene: slightly more opaque on mobile for better star visibility */
+  .scene-3d-container {
+    opacity: 0.75;
+  }
+
+  /* Hide custom cursor elements entirely on touch (belt-and-suspenders) */
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+
+  /* Prevent horizontal overflow from contact email breaking layout */
+  .email-link {
+    word-break: break-all;
+  }
+}
+
+/* Very small devices (< 400px) */
+@media (max-width: 400px) {
+  .text-hero {
+    font-size: clamp(2.6rem, 14vw, 4rem);
+  }
+  .text-section-title {
+    font-size: clamp(1.7rem, 8vw, 2.6rem);
+  }
+}
+
+
+/* Custom Cursor Styles — only shown on hover: hover devices via JS */
 .custom-cursor-dot {
   position: fixed;
   top: 0;

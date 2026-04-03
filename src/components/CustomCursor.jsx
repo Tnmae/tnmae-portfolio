@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'framer-motion';
 
+// Detect touch/coarse pointer devices — no mouse cursor needed there
+const isTouchDevice = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
 const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+
+  // Don't render anything on touch / mobile devices
+  if (isTouchDevice()) return null;
   
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

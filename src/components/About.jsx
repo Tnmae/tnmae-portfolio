@@ -17,7 +17,7 @@ const About = ({ id }) => {
             A little about me
           </h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '3rem' }}>
             <div>
               <p className="text-body" style={{ marginBottom: '1.5rem' }}>
                 I am Tanmay Tyagi, a B.Tech student at Netaji Subhas University of Technology (2023-2027) with a deep interest in systems programming, graphics, and performance optimization.
@@ -30,12 +30,13 @@ const About = ({ id }) => {
               </p>
             </div>
             
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: 'relative', maxWidth: '480px', margin: '0 auto', width: '100%' }}>
               <motion.div 
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 style={{
                   width: '100%',
+                  maxHeight: '480px',
                   aspectRatio: '1',
                   background: 'var(--color-surface)',
                   borderRadius: '8px',

@@ -120,7 +120,7 @@ const Hero = ({ id }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
-          style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', pointerEvents: 'auto' }}
+          style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', pointerEvents: 'auto', flexWrap: 'wrap' }}
         >
           <a href="#projects" style={{
             background: 'var(--color-accent)',
@@ -129,6 +129,7 @@ const Hero = ({ id }) => {
             borderRadius: '4px',
             fontWeight: 500,
             transition: 'transform 0.2s',
+            whiteSpace: 'nowrap',
           }}
           onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
@@ -139,7 +140,8 @@ const Hero = ({ id }) => {
             color: 'var(--color-text-primary)',
             borderBottom: '1px solid var(--color-border)',
             paddingBottom: '4px',
-            transition: 'border-color 0.2s'
+            transition: 'border-color 0.2s',
+            whiteSpace: 'nowrap',
           }}
           onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--color-accent)'}
           onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
