@@ -1,6 +1,5 @@
-import { useMemo, useRef, useState, useEffect } from 'react';
+import {  useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Canvas, useFrame } from '@react-three/fiber';
 import { ArrowDown } from 'lucide-react';
 
 
