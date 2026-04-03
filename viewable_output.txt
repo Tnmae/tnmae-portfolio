@@ -1,0 +1,117 @@
+﻿=== GITHUB REPOS ===
+[
+  {
+    "name": "ESP8266-Chat-App",
+    "description": "A Web Based Decentralized Chat App made using ESP8266 as Web Server",
+    "language": "HTML",
+    "html_url": "https://github.com/Tnmae/ESP8266-Chat-App",
+    "stargazers_count": 0
+  },
+  {
+    "name": "greensense-farm-flow",
+    "description": null,
+    "language": "TypeScript",
+    "html_url": "https://github.com/Tnmae/greensense-farm-flow",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Img2ASCII",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/Img2ASCII",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Multi-threaded-HTTP-server",
+    "description": null,
+    "language": "C++",
+    "html_url": "https://github.com/Tnmae/Multi-threaded-HTTP-server",
+    "stargazers_count": 0
+  },
+  {
+    "name": "nixos-backup",
+    "description": null,
+    "language": "Rust",
+    "html_url": "https://github.com/Tnmae/nixos-backup",
+    "stargazers_count": 0
+  },
+  {
+    "name": "nixOS_config",
+    "description": null,
+    "language": "Nix",
+    "html_url": "https://github.com/Tnmae/nixOS_config",
+    "stargazers_count": 0
+  },
+  {
+    "name": "nvim",
+    "description": null,
+    "language": "Lua",
+    "html_url": "https://github.com/Tnmae/nvim",
+    "stargazers_count": 0
+  },
+  {
+    "name": "openenv-meta",
+    "description": "This repository will be used for the development of round-1 project's development and submission for Meta OpenEnv Hackathon Submission",
+    "language": "Python",
+    "html_url": "https://github.com/Tnmae/openenv-meta",
+    "stargazers_count": 0
+  },
+  {
+    "name": "OpenGL",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/OpenGL",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Perlin-Implementation",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/Perlin-Implementation",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Ray-Tracing-SDL2",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/Ray-Tracing-SDL2",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Rotating-Cube-SDL2",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/Rotating-Cube-SDL2",
+    "stargazers_count": 0
+  },
+  {
+    "name": "sherlock",
+    "description": "Hunt down social media accounts by username across social networks",
+    "language": "Python",
+    "html_url": "https://github.com/Tnmae/sherlock",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Tnmae",
+    "description": null,
+    "language": null,
+    "html_url": "https://github.com/Tnmae/Tnmae",
+    "stargazers_count": 0
+  },
+  {
+    "name": "Vid2ASCII",
+    "description": null,
+    "language": "C",
+    "html_url": "https://github.com/Tnmae/Vid2ASCII",
+    "stargazers_count": 8
+  },
+  {
+    "name": "WOA-GPU",
+    "description": null,
+    "language": "C++",
+    "html_url": "https://github.com/Tnmae/WOA-GPU",
+    "stargazers_count": 0
+  }
+]
+=== RESUME TEXT ===
+Error reading PDF: 'charmap' codec can't encode character '\u25e6' in position 269: character maps to <undefined>
